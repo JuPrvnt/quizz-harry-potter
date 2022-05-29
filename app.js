@@ -32,6 +32,7 @@ function checkFunc(resTable) {
   }
   // console.log(checkTable);
   displayResults(checkTable);
+  colorsFunction(checkTable);
   checkTable = [];
 }
 
@@ -63,5 +64,23 @@ function displayResults(tabToCheck) {
       resultHelp.innerText = "Tu veux retenter ta chance ?";
       resultScore.innerText = "0/3";
       break;
+
+    default:
+      "Wops, une erreur est apparue comme par magie.";
+  }
+}
+
+function colorsFunction(tabBoolean) {
+  for (let c = 0; c < tabBoolean.length; c++) {
+    if (tabBoolean[c] === true) {
+      allQuestions[c].style.background = "lightgreen";
+    } else {
+      allQuestions[c].style.background = "#ffb8b8";
+      allQuestions[c].classList.add("loose");
+
+      setTimeout(() => {
+        allQuestions[c].classList.remove("loose");
+      }, 500);
+    }
   }
 }
