@@ -84,3 +84,9 @@ function colorsFunction(tabBoolean) {
     }
   }
 }
+
+allQuestions.forEach((item) => {
+  item.addEventListener("click", () => {
+    item.style.background = "white";
+  });
+});
