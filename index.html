@@ -6,18 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quizz Harry Potter</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
+    <link href="http://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
 </head>
 
 <body>
 
-    <h1>Quizz Harry Potter</h1>
+    <div class="quizz-hp-header">
+        <h1>Bienvenue, sorcier(ère). <br />Votre départ pour Poudlard est imminent.</h1>
+        <img class="quizz-hp-img-home" src="./assets/Poudlard.jpg">
+    </div>
 
-    <div class="container-global">
+    <div class="quizz-hp-container-global">
+
+        <h2>Avant cela, le choixpeau magique doit définir dans quelle maison vous placer.<br />Il est temps de répondre
+            au quizz pour le découvrir...</h2>
 
         <form class="quizz-hp-form">
 
             <div class="quizz-hp-block">
-                <h3>Pour quel événement Harry va-t-il au zoo ?</h2>
+                <h4>Lors de quel événement Harry va-t-il au zoo ?</h2>
 
                     <div>
                         <input type="radio" id="Harry" name="q1" value="a" checked>
@@ -34,7 +42,7 @@
             </div>
 
             <div class="quizz-hp-block">
-                <h3>Qui Harry rencontre-t-il en premier ?</h2>
+                <h4>Qui Harry rencontre-t-il en premier ?</h2>
 
                     <div>
                         <input type="radio" id="Ginny" name="q1" value="a" checked>
@@ -50,14 +58,31 @@
                     </div>
             </div>
 
-            <button type="submit">Vous êtes sûr de vous ? Alors validez !</button>
+            <div class="quizz-hp-block">
+                <h4>Qui découvre qui est Nicolas Flamel ?</h2>
+
+                    <div>
+                        <input type="radio" id="Harry" name="q1" value="a" checked>
+                        <label for="Harry">Harry</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="Hermione" name="q1" value="b">
+                        <label for="Hermione">Hermione</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="Ron" name="q1" value="c">
+                        <label for="Ron">Ron</label>
+                    </div>
+            </div>
+
+            <button class="quizz-hp-button" type="submit">Vous êtes sûr de vous ? Alors validez !</button>
 
         </form>
 
-        <div class="resultats">
-            <h2>Validez pour voir vos résultats.</h2>
-            <p class="aide"></p>
-            <p class="note"></p>
+        <div class="quizz-hp-results">
+            <h3>Validez pour voir vos résultats.</h2>
+                <p class="quizz-hp-help"></p>
+                <p class="quizz-hp-score"></p>
         </div>
     </div>
 
