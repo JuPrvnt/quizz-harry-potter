@@ -1,6 +1,6 @@
 const form = document.querySelector(".quizz-hp-form");
 let resultsTable = [];
-const responses = ["c", "a", "b"];
+const responses = ["c", "a", "b", "a"];
 const emojis = ["🧙🏻‍♂️", "🔮", "🪄", "👻", "💀"];
 const resultTitle = document.querySelector(".quizz-hp-results h3");
 const resultHelp = document.querySelector(".quizz-hp-help");
@@ -12,7 +12,7 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   // console.log(document.querySelector('input[name="q1"]:checked').value);
 
-  for (i = 1; i < 4; i++) {
+  for (i = 1; i < 5; i++) {
     resultsTable.push(
       document.querySelector(`input[name="q${i}"]:checked`).value
     );
@@ -23,7 +23,7 @@ form.addEventListener("submit", (e) => {
 });
 
 function checkFunc(resTable) {
-  for (let a = 0; a < 3; a++) {
+  for (let a = 0; a < 4; a++) {
     if (resTable[a] === responses[a]) {
       checkTable.push(true);
     } else {
