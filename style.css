@@ -24,6 +24,7 @@ h1 {
   margin: 20px;
   padding: 30px;
   box-shadow: 0 30px 30px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
 }
 
 .quizz-hp-img-home {
@@ -45,25 +46,42 @@ h2 {
   text-align: center;
 }
 
+.quizz-hp-form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
 .quizz-hp-block {
   padding: 20px;
   margin: 20px;
   background-color: white;
   color: #7f0909;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+  border-radius: 5px;
 }
 
 h4 {
   margin: 0px;
+  padding-bottom: 10px;
+  font-size: 18px;
+}
+
+.quizz-hp-block input[type="radio"] {
+  transform: scale(1.8);
+  margin: 10px;
 }
 
 .quizz-hp-button {
+  display: flex;
   margin: 20px;
-  padding: 10px;
-  font-size: 20px;
+  padding: 15px;
+  font-size: 18px;
   color: #7f0909;
   border-radius: 25px;
   border-color: white;
+  align-self: center;
 }
 
 .quizz-hp-button:hover {
@@ -73,6 +91,49 @@ h4 {
   border-color: #576561;
   stroke: none;
   animation: color-heart 1000ms normal 1 backwards;
+}
+
+.quizz-hp-results {
+  padding: 25px;
+  margin: 10px 0px 70px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.quizz-hp-results {
+  text-align: center;
+  background-color: white;
+}
+
+.quizz-hp-help {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.quizz-hp-score {
+  text-align: center;
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+.loose {
+  animation: loose 0.3s ease-in-out;
+}
+
+@keyframes loose {
+  0% {
+    transform: translateX(0px);
+  }
+  33% {
+    transform: translateX(5px);
+  }
+  66% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }
 
 @media screen and (max-width: 395px) {
