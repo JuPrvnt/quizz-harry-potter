@@ -36,13 +36,13 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
 }
 
 h2 {
   font-weight: 200;
   color: white;
   font-size: 30px;
+  text-align: center;
 }
 
 .quizz-hp-block {
