@@ -3,8 +3,8 @@ let resultsTable = [];
 const responses = ["c", "a", "b"];
 const emojis = ["🧙🏻‍♂️", "🔮", "🪄", "👻", "💀"];
 const resultTitle = document.querySelector(".quizz-hp-results h3");
-const resultText = document.querySelector(".quizz-hp-score");
 const resultHelp = document.querySelector(".quizz-hp-help");
+const resultScore = document.querySelector(".quizz-hp-score");
 const allQuestions = document.querySelectorAll(".quizz-hp-block");
 let checkTable = [];
 
@@ -30,6 +30,38 @@ function checkFunc(resTable) {
       checkTable.push(false);
     }
   }
-  console.log(checkTable);
+  // console.log(checkTable);
+  displayResults(checkTable);
   checkTable = [];
+}
+
+function displayResults(tabToCheck) {
+  const nbFalse = tabToCheck.filter((el) => el !== true).length;
+  // console.log(nbFalse);
+
+  switch (nbFalse) {
+    case 0:
+      resultTitle.innerText = `Bravo, tu es un vrai sorcier ${emojis[0]} !`;
+      resultHelp.innerText = "";
+      resultScore.innerText = "3/3";
+      break;
+
+    case 1:
+      resultTitle.innerText = `Presque tout juste, tu es devin ? ${emojis[1]} !`;
+      resultHelp.innerText = "Tu préfères avoir tout juste ?";
+      resultScore.innerText = "2/3";
+      break;
+
+    case 2:
+      resultTitle.innerText = `Un petit coup de baguette magique ?${emojis[2]} !`;
+      resultHelp.innerText = "Peut-être que ça t'aidera...";
+      resultScore.innerText = "1/3";
+      break;
+
+    case 3:
+      resultTitle.innerText = `Aïe, tu as encore des choses à apprendre...${emojis[3]} !`;
+      resultHelp.innerText = "Tu veux retenter ta chance ?";
+      resultScore.innerText = "0/3";
+      break;
+  }
 }
